@@ -213,6 +213,13 @@ int main(int argc, char const *argv[])
               file_logG(my_log,"sent SIGUSR1 to M2");
             }
           } else if(check_button_pressed(rst_button, &event)){ // RESET button pressed
+                    /*
+                      if the reset button is pressed, a signal is sent to M1 and M2 to invert the
+                      velocity, whereas the command console sets its interal counter for the velocities
+                      to zero; the command console is not put into wait() because it was preferred to
+                      let the user have the freedom to modify the motion of the hoist and in any case
+                      any mistakes made with the button is handled
+                    */
                     mvprintw(LINES - 1, 1, "RST button pressed");
                     refresh();
                     sleep(1);
