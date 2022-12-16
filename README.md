@@ -21,6 +21,8 @@ sudo apt-get install libncurses-dev
 ```console
 ./run.sh
 ```
+## Github repository
+https://github.com/Carmine00/ARP-Assignment-1.git
 
 ## Author
 Carmine Miceli
